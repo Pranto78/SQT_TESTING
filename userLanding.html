@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BookingExpress Premium Events</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Icons&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#E7C27D", // Champagne Gold
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0A0A0A",
+                        "card-dark": "#141414",
+                        "gold-muted": "rgba(231, 194, 125, 0.2)",
+                    },
+                    fontFamily: {
+                        display: ["'Playfair Display'", "serif"],
+                        sans: ["'Inter'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-icons {
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #E7C27D;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans min-h-screen transition-colors duration-300">
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-primary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-display font-bold text-primary tracking-tight">BookingExpress</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <span class="hidden md:block text-sm font-medium text-slate-500 dark:text-slate-400">Welcome, <span
+                            class="text-slate-900 dark:text-white">Alex Morgan</span></span>
+                    <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+                        <span class="material-icons">notifications</span>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+                        <span class="material-icons">settings</span>
+                    </button>
+                    <button
+                        class="flex items-center space-x-2 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+                        <span class="material-icons">logout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <aside class="w-full lg:w-72 flex-shrink-0">
+                <div
+                    class="sticky top-32 bg-white dark:bg-card-dark border border-slate-200 dark:border-primary/20 rounded-xl p-6 shadow-xl">
+                    <div class="flex justify-between items-center mb-8">
+                        <h2 class="text-xl font-display font-bold text-slate-900 dark:text-primary">Filter</h2>
+                        <button
+                            class="text-xs uppercase tracking-widest font-semibold text-primary hover:text-white hover:bg-primary px-3 py-1 rounded border border-primary transition-all duration-300">
+                            Reset Filter
+                        </button>
+                    </div>
+                    <div class="mb-8">
+                        <h3
+                            class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4 tracking-wide uppercase">
+                            Category</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Late
+                                    Night Party</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input checked=""
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Late
+                                    Night Concert</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Day
+                                    Long Concert</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Reunion</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Conference</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="h-px bg-slate-200 dark:bg-primary/10 mb-8"></div>
+                    <div>
+                        <h3
+                            class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-4 tracking-wide uppercase">
+                            Weekday</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Saturday</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input checked=""
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Sunday</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Monday</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Tuesday</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Wednesday</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Thursday</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <input
+                                    class="rounded border-slate-300 dark:border-primary/40 bg-transparent text-primary focus:ring-primary h-4 w-4"
+                                    type="checkbox" />
+                                <span
+                                    class="ml-3 text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Friday</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="flex-1">
+                <h1 class="text-3xl font-display font-bold text-slate-900 dark:text-white mb-8">Upcoming Events</h1>
+                <div class="space-y-6">
+                    <div
+                        class="group bg-white dark:bg-card-dark border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-md hover:shadow-primary/5">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 h-48 md:h-auto overflow-hidden">
+                                <img alt="Jazz performance on a stage"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_4TKA9jCiqQ4sGJ3d5dZbfnhSktj0LmZgpTzJHt81HDbcYmbjsr3V-ZVu1An84FQVURa_DR5mIeONg0sCq_R2fYInTXrRzA01eu2Hf_InYdD6NwqCRriVVurlPe-gi30a-n2WO5GEydpGcAZmAmuTCosww5RkYekQSJfVv7HIE4kfIZF5VaW-8DghZuXC5AWtScdy5VkpqOVFNDGAQ0_wCLayN9zA-mWz2FYJXX1Kk7AQpEo6UPR7R_keVU9dfq47f-X6omYG0R8" />
+                            </div>
+                            <div class="flex-1 p-6 md:p-8 flex items-center">
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full items-center">
+                                    <div class="flex flex-col border-r border-slate-200 dark:border-primary/10 pr-4">
+                                        <span
+                                            class="text-xs uppercase tracking-widest text-primary font-bold">Oct</span>
+                                        <span class="text-4xl font-display font-bold dark:text-white">19</span>
+                                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400">7:00
+                                            PM</span>
+                                    </div>
+                                    <div class="md:col-span-2 space-y-2">
+                                        <h3
+                                            class="text-xl md:text-2xl font-display font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                                            Blues on the Beach: Midnight Sessions</h3>
+                                        <div class="flex items-center text-slate-500 dark:text-slate-400 text-sm">
+                                            <span class="material-icons text-primary mr-1 text-base">place</span>
+                                            Santa Cruz Boardwalk, CA
+                                        </div>
+                                        <p class="text-primary font-bold mt-2">$45 - $130</p>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <button
+                                            class="w-full md:w-auto px-8 py-3 bg-primary text-background-dark font-bold rounded hover:bg-white hover:text-background-dark transition-all duration-300 shadow-lg shadow-primary/20">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-white dark:bg-card-dark border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-md hover:shadow-primary/5">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 h-48 md:h-auto overflow-hidden">
+                                <img alt="Crowd at a golden hour outdoor concert"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuATLJq7kroupULmZ8Cjxg9-MwlA3AjtU4o4M5LF4UjOLEyHcMwFnd7hdYx27gdKr41d1N_yMzcW27hmbonPVQKpjnvEB2vJhd7ajPN00fS0gsPh-94i-9KssRNuIfnCEx_3mEJiIL8_kwLNYInLtXwCgrsXISa6p1zyHWvHIUDZ00iSxgn14NYNIwTxJJLO-JMTH0NJys-27dnKMOycFebHxXnSxsHESy9-l_BaIMEuGQcCqzqj7uQ1ANYlBAacH2ABv8PusHsef48" />
+                            </div>
+                            <div class="flex-1 p-6 md:p-8 flex items-center">
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full items-center">
+                                    <div class="flex flex-col border-r border-slate-200 dark:border-primary/10 pr-4">
+                                        <span
+                                            class="text-xs uppercase tracking-widest text-primary font-bold">Oct</span>
+                                        <span class="text-4xl font-display font-bold dark:text-white">22</span>
+                                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400">8:30
+                                            PM</span>
+                                    </div>
+                                    <div class="md:col-span-2 space-y-2">
+                                        <h3
+                                            class="text-xl md:text-2xl font-display font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                                            Neon Skyline Rooftop Gala</h3>
+                                        <div class="flex items-center text-slate-500 dark:text-slate-400 text-sm">
+                                            <span class="material-icons text-primary mr-1 text-base">place</span>
+                                            Grand Horizon Hotel, San Francisco
+                                        </div>
+                                        <p class="text-primary font-bold mt-2">$120 - $250</p>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <button
+                                            class="w-full md:w-auto px-8 py-3 bg-primary text-background-dark font-bold rounded hover:bg-white hover:text-background-dark transition-all duration-300 shadow-lg shadow-primary/20">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-white dark:bg-card-dark border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-md hover:shadow-primary/5">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 h-48 md:h-auto overflow-hidden">
+                                <img alt="Stage lights and atmosphere"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC04pnB8UbZr4MYLYC2g5skR22etYy_AmUGZDlPpgSwYJs_RQgikdcyUGP2Rv6PkDS-1axfjavJlSWYK4kobNOdCPmQRZWxxWzjOUSjEUwJK9vFw3bbxvhQZyv8EXPzyEBPDdgCj2B9ij9j3yMgWLxM66N0jUzTQKMJwBxsyKTYpG75Kg8Z6mxAaaCCKRJMOQnnCO9ZzkMwJOe5d5278b6p6W3HxPt9xWhV6dj__yk-yENjJmk02l6MFkH2uxALaMkePJhjeLNWUZs" />
+                            </div>
+                            <div class="flex-1 p-6 md:p-8 flex items-center">
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full items-center">
+                                    <div class="flex flex-col border-r border-slate-200 dark:border-primary/10 pr-4">
+                                        <span
+                                            class="text-xs uppercase tracking-widest text-primary font-bold">Nov</span>
+                                        <span class="text-4xl font-display font-bold dark:text-white">05</span>
+                                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400">10:00
+                                            PM</span>
+                                    </div>
+                                    <div class="md:col-span-2 space-y-2">
+                                        <h3
+                                            class="text-xl md:text-2xl font-display font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                                            Techno Warehouse Experience</h3>
+                                        <div class="flex items-center text-slate-500 dark:text-slate-400 text-sm">
+                                            <span class="material-icons text-primary mr-1 text-base">place</span>
+                                            District 4 Industrial Park, LA
+                                        </div>
+                                        <p class="text-primary font-bold mt-2">$65 - $90</p>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <button
+                                            class="w-full md:w-auto px-8 py-3 bg-primary text-background-dark font-bold rounded hover:bg-white hover:text-background-dark transition-all duration-300 shadow-lg shadow-primary/20">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-8 flex justify-center">
+                        <button class="flex items-center space-x-2 text-slate-400 hover:text-primary transition-colors">
+                            <span class="font-semibold uppercase tracking-widest text-sm">View All Events</span>
+                            <span class="material-icons">keyboard_arrow_down</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="mt-20 py-12 border-t border-slate-200 dark:border-primary/10 bg-slate-50 dark:bg-card-dark">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-primary font-display font-bold text-xl">BookingExpress</div>
+            <div class="text-slate-500 dark:text-slate-400 text-sm">
+                © 2023 BookingExpress Premium Events. All rights reserved.
+            </div>
+            <div class="flex space-x-6 text-slate-400">
+                <a class="hover:text-primary transition-colors" href="#">Terms</a>
+                <a class="hover:text-primary transition-colors" href="#">Privacy</a>
+                <a class="hover:text-primary transition-colors" href="#">Support</a>
+            </div>
+        </div>
+    </footer>
+    <button
+        class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary text-background-dark shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50"
+        onclick="document.documentElement.classList.toggle('dark')">
+        <span class="material-icons">dark_mode</span>
+    </button>
+
+</body>
+
+</html>

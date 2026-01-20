@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BookingExpress Premium Refund Tracker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37", // Champagne Gold
+                        "background-light": "#FDFCFB",
+                        "background-dark": "#0F0F0F", // Deep charcoal/black
+                        accent: "#C5A028",
+                        card: {
+                            light: "#FFFFFF",
+                            dark: "#1A1A1A"
+                        }
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+        }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 24px;
+            bottom: 0;
+            width: 2px;
+            background-color: rgba(212, 175, 55, 0.2);
+        }
+
+        .timeline-item:last-child .timeline-line::before {
+            display: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+    <nav class="border-b border-slate-200 dark:border-white/10 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-primary font-display text-2xl font-bold tracking-tight">BookingExpress</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+                <a class="hover:text-primary transition-colors" href="#">Home</a>
+                <a class="hover:text-primary transition-colors" href="#">Events</a>
+                <a class="text-primary" href="#">Refund</a>
+                <a class="hover:text-primary transition-colors" href="#">Blog</a>
+                <a class="hover:text-primary transition-colors" href="#">Contact Us</a>
+            </div>
+            <button
+                class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-lg shadow-primary/20">
+                Get Started
+            </button>
+        </div>
+    </nav>
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
+        <header class="text-center mb-16">
+            <h1 class="font-display text-5xl md:text-6xl text-slate-900 dark:text-white mb-8">
+                Track Request <span class="text-primary">Status</span>
+            </h1>
+            <div
+                class="inline-flex p-1 bg-slate-100 dark:bg-white/5 rounded-full border border-slate-200 dark:border-white/10">
+                <button
+                    class="px-6 py-2 rounded-full text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                    Refund Terms
+                </button>
+                <button
+                    class="px-6 py-2 rounded-full text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                    Request Cancellation
+                </button>
+                <button class="px-8 py-2 rounded-full text-sm font-semibold bg-primary text-white shadow-md">
+                    Track Status
+                </button>
+            </div>
+        </header>
+        <section class="mb-12">
+            <h2 class="text-lg font-medium mb-4 text-slate-700 dark:text-slate-300">Check your Request Status</h2>
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="relative flex-grow group">
+                    <input
+                        class="w-full bg-white dark:bg-card-dark border border-slate-300 dark:border-white/10 rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-400 dark:placeholder:text-slate-600"
+                        placeholder="Enter your request ID or order number" type="text" value="REF-20250427-8642" />
+                </div>
+                <button
+                    class="bg-primary hover:bg-accent text-white px-10 py-4 rounded-lg font-semibold transition-all flex items-center justify-center space-x-2">
+                    <span class="material-icons-outlined text-xl">search</span>
+                    <span>Track Status</span>
+                </button>
+            </div>
+        </section>
+        <div
+            class="bg-white dark:bg-card-dark border border-slate-200 dark:border-primary/30 rounded-2xl overflow-hidden gold-glow">
+            <div class="bg-slate-50 dark:bg-white/5 border-b border-slate-200 dark:border-white/10 px-8 py-6">
+                <div class="flex flex-wrap justify-between items-center gap-4">
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Request ID</p>
+                        <h3 class="text-xl font-semibold dark:text-white">REF-20250427-8642</h3>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-1">
+                            Current Status</p>
+                        <span
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20">
+                            <span class="w-2 h-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+                            IN PROGRESS
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Order Number</p>
+                        <p class="font-medium dark:text-slate-200">ORD-87654321</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Submitted</p>
+                        <p class="font-medium dark:text-slate-200">April 27, 2025</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1">Product</p>
+                        <p class="font-medium dark:text-slate-200">Premium Subscription</p>
+                    </div>
+                </div>
+                <div class="space-y-0">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-8">Status Timeline</h4>
+                    <div class="space-y-0">
+                        <div class="relative pl-10 pb-8 timeline-item timeline-line">
+                            <div
+                                class="absolute left-0 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10">
+                                <span class="material-icons-outlined text-white text-xs">check</span>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-slate-900 dark:text-white leading-none mb-1">Request
+                                    Received</h5>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">April 27, 2025 • 10:23 AM</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-10 pb-8 timeline-item timeline-line">
+                            <div
+                                class="absolute left-0 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10">
+                                <span class="material-icons-outlined text-white text-xs">check</span>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-slate-900 dark:text-white leading-none mb-1">Request
+                                    Validated</h5>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">April 28, 2025 • 9:15 AM</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-10 pb-8 timeline-item timeline-line">
+                            <div
+                                class="absolute left-0 top-0 w-6 h-6 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center z-10">
+                                <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-primary leading-none mb-1">Processing Refund</h5>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 italic">In progress...</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-10 pb-8 timeline-item timeline-line">
+                            <div
+                                class="absolute left-0 top-0 w-6 h-6 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center z-10">
+                                <span class="material-icons-outlined text-slate-400 text-xs">schedule</span>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-slate-400 dark:text-slate-600 leading-none mb-1">Refund
+                                    Issued</h5>
+                                <p class="text-sm text-slate-400 dark:text-slate-600">Pending</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-10 timeline-item">
+                            <div
+                                class="absolute left-0 top-0 w-6 h-6 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center z-10">
+                                <span class="material-icons-outlined text-slate-400 text-xs">flag</span>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-slate-400 dark:text-slate-600 leading-none mb-1">Refund
+                                    Complete</h5>
+                                <p class="text-sm text-slate-400 dark:text-slate-600">Pending</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 text-center max-w-2xl mx-auto">
+            <p class="text-primary font-display text-xl mb-4 italic">Estimated Completion Time</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Your refund request is currently being processed. Based on your payment method, you can expect the
+                refund to be completed within <span class="text-primary font-bold">3-5 business days</span> from now.
+            </p>
+        </div>
+    </main>
+    <footer class="mt-20 border-t border-slate-200 dark:border-white/10 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div class="flex space-x-6 text-slate-400">
+                    <a class="hover:text-primary transition-colors" href="#"><span
+                            class="material-icons-outlined">facebook</span></a>
+                    <a class="hover:text-primary transition-colors" href="#"><span
+                            class="material-icons-outlined">camera_alt</span></a>
+                    <a class="hover:text-primary transition-colors" href="#"><span
+                            class="material-icons-outlined">alternate_email</span></a>
+                </div>
+                <div
+                    class="flex space-x-8 text-xs font-medium uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                    <a class="hover:text-primary transition-colors" href="#">Home</a>
+                    <a class="hover:text-primary transition-colors" href="#">Event</a>
+                    <a class="hover:text-primary transition-colors" href="#">About Us</a>
+                    <a class="hover:text-primary transition-colors" href="#">Blog</a>
+                    <a class="hover:text-primary transition-colors" href="#">Contact Us</a>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-600">
+                    © 2025 BookingExpress. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Check for dark mode preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.add('dark'); // Keeping it dark by default as per request
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Event Details - BookingExpress</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37", // Champagne Gold
+                        "background-light": "#FDFCFB",
+                        "background-dark": "#000000",
+                        "charcoal": "#121212",
+                        "charcoal-light": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 min-h-screen">
+    <nav
+        class="border-b border-slate-200 dark:border-white/10 py-6 px-8 flex justify-between items-center bg-background-light dark:bg-background-dark sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <span class="text-primary text-2xl font-bold tracking-tighter serif-font italic">BookingExpress</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide uppercase">
+            <a class="hover:text-primary transition-colors" href="#">Events</a>
+            <a class="hover:text-primary transition-colors" href="#">Venues</a>
+            <a class="hover:text-primary transition-colors" href="#">About</a>
+            <a class="hover:text-primary transition-colors" href="#">Support</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="p-2 text-slate-500 hover:text-primary transition-colors">
+                <span class="material-icons-outlined">search</span>
+            </button>
+            <button class="p-2 text-slate-500 hover:text-primary transition-colors">
+                <span class="material-icons-outlined">account_circle</span>
+            </button>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+                <nav class="flex mb-4 text-xs uppercase tracking-[0.2em] text-slate-500">
+                    <a class="hover:text-primary transition-colors" href="#">Home</a>
+                    <span class="mx-2">/</span>
+                    <a class="hover:text-primary transition-colors" href="#">Esports Events</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-primary">Details</span>
+                </nav>
+                <h1 class="text-5xl md:text-6xl text-slate-900 dark:text-white serif-font font-medium">Event Details
+                </h1>
+            </div>
+            <button
+                class="bg-primary hover:bg-opacity-90 text-black font-bold py-4 px-10 rounded-none tracking-widest uppercase transition-all transform hover:-translate-y-1 active:scale-95 shadow-lg">
+                Buy Tickets
+            </button>
+        </div>
+        <div
+            class="bg-slate-50 dark:bg-charcoal border border-slate-200 dark:border-white/5 rounded-sm p-8 mb-10 shadow-2xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-y-8 gap-x-4">
+                <div class="flex flex-col space-y-2">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Date</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-white">May 10, 2025</span>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Time</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-white whitespace-nowrap">9:00 AM - 10:00
+                        PM</span>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Location</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-white">AIUB Campus</span>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Venue</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-white">Multipurpose Hall-2</span>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Category</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-white">Game Contest</span>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Organizer</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-white">E-sports Federation</span>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">Phone</span>
+                    <span class="text-sm font-medium text-slate-900 dark:text-white">01744543617</span>
+                </div>
+            </div>
+        </div>
+        <div
+            class="bg-slate-100 dark:bg-charcoal-light rounded-sm border border-slate-200 dark:border-white/5 p-8 md:p-12 shadow-xl">
+            <div class="prose prose-slate dark:prose-invert max-w-none">
+                <div class="flex items-center space-x-3 mb-8">
+                    <div class="h-[1px] w-12 bg-primary"></div>
+                    <span class="text-primary uppercase tracking-[0.3em] text-xs font-bold">Experience the Future</span>
+                </div>
+                <p
+                    class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 first-letter:text-5xl first-letter:font-display first-letter:text-primary first-letter:mr-3 first-letter:float-left first-letter:mt-1">
+                    The gaming competition will take place at the Multipurpose Hall-2, AIUB, a spacious and
+                    well-equipped venue designed to host large-scale esports tournaments and gaming-related events. The
+                    venue will be transformed into a vibrant and high-energy environment to welcome players, fans, and
+                    sponsors.
+                </p>
+                <h3 class="serif-font text-2xl mt-10 mb-4 text-slate-900 dark:text-white">Venue Setup and Experience
+                </h3>
+                <p class="text-slate-700 dark:text-slate-400 leading-relaxed mb-6">
+                    As attendees walk into the hall, they'll be greeted by the glow of LED lights, game-themed banners,
+                    and immersive audio effects setting the stage for a day full of digital action. The venue will be
+                    divided into several key sections:
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 my-10">
+                    <div class="bg-white/5 p-6 border-l-2 border-primary">
+                        <h4 class="text-primary uppercase tracking-wider text-sm font-bold mb-2">Main Arena</h4>
+                        <p class="text-sm text-slate-400 italic leading-relaxed">A central stage with high-end PCs and
+                            consoles where headline matches and finals will be played live in front of an audience.
+                            Massive display screens will show real-time gameplay, commentary, and scores.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 border-l-2 border-primary">
+                        <h4 class="text-primary uppercase tracking-wider text-sm font-bold mb-2">Player Zones</h4>
+                        <p class="text-sm text-slate-400 italic leading-relaxed">Designated seating for registered teams
+                            and solo players. Each zone will have professional gaming setups with ergonomic chairs,
+                            headsets, and cooling fans.</p>
+                    </div>
+                </div>
+                <p class="text-slate-700 dark:text-slate-400 leading-relaxed">
+                    <strong class="text-slate-900 dark:text-white serif-font text-lg block mb-2">Spectator Area</strong>
+                    Rows of comfortable seating will be arranged for spectators to watch the matches, cheer for teams,
+                    and enjoy live commentary from shoutcasters.
+                </p>
+                <div class="my-10 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="flex-1">
+                        <h4 class="text-slate-900 dark:text-white font-bold mb-3">Warm-up and Practice Zone</h4>
+                        <p class="text-slate-600 dark:text-slate-400">A separate space will be provided where
+                            competitors can practice before their matches. High-speed connectivity ensures no lag during
+                            crucial warm-ups.</p>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-slate-900 dark:text-white font-bold mb-3">Organizer Booth &amp; Help Desk</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Located near the entrance, this booth will assist
+                            with participant check-ins, schedule inquiries, and technical support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 border-t border-slate-200 dark:border-white/10 pt-10 flex flex-col items-center text-center">
+            <h2 class="serif-font text-3xl mb-4">Don't miss the digital battle.</h2>
+            <p class="text-slate-500 mb-8 max-w-lg">Join thousands of fans and witness history in the making. Limited
+                seats available for the premier event of 2025.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button
+                    class="bg-primary text-black font-bold py-4 px-12 tracking-widest uppercase hover:bg-opacity-80 transition-all">Secure
+                    Your Ticket</button>
+                <button
+                    class="border border-slate-200 dark:border-white/20 text-slate-800 dark:text-white font-bold py-4 px-12 tracking-widest uppercase hover:bg-white hover:text-black transition-all">Add
+                    to Calendar</button>
+            </div>
+        </div>
+    </main>
+    <footer
+        class="py-12 mt-20 border-t border-slate-200 dark:border-white/10 text-center text-slate-500 text-xs tracking-widest uppercase">
+        <p>© 2025 BookingExpress Premium. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
