@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BookingExpress Premium Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#172136", // Midnight Blue
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#15181d",
+                        "champagne": "#C9A961",
+                        "charcoal": "#282D38",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(40, 45, 56, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+        }
+        .glass-card:hover {
+            border-color: rgba(201, 169, 97, 0.6);
+            transition: all 0.3s ease;
+        }
+        .gold-border-gradient {
+            border: 1px solid transparent;
+            background: linear-gradient(#20242c, #20242c) padding-box,
+                        linear-gradient(to right, #C9A961, #8E793E) border-box;
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(21, 24, 29, 0.4) 0%, rgba(21, 24, 29, 0.95) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-white/90">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="fixed top-0 z-50 w-full bg-background-dark/80 backdrop-blur-md border-b border-white/5 px-6 lg:px-20 py-4">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-champagne">
+<span class="material-symbols-outlined text-3xl">token</span>
+</div>
+<h1 class="font-display text-2xl font-bold tracking-tight text-white">BookingExpress</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-champagne transition-colors" href="#">Events</a>
+<a class="text-sm font-medium hover:text-champagne transition-colors" href="#">VIP Packages</a>
+<a class="text-sm font-medium hover:text-champagne transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-champagne transition-colors" href="#">My Bookings</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 rounded-lg border border-champagne/40 text-champagne text-sm font-bold hover:bg-champagne/10 transition-all">
+                        Sign In
+                    </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col items-center justify-center pt-20 px-4">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 hero-overlay z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="High-end atmospheric gala event with soft lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdpnsYygWWo4exbzGsbIpwxVmC41Jp1mTzg44jp-5hItFE8Ye2lPTuRTmKYYsPtso-aahCJyV-I06jkXpHm9a0ZQv2NcI_kp7v7ZvAWNzp4mnHnTnxlmtnPn8Xt6aXBhTfonizv59GZ6SdCpbCWz-0cNfMWoN-wjZMABImuIp97KzF47pEWhU-wX_lChwBRBO35NB47wLc1PauX-mH17WR8TqthupUMJflEsbEtigwsx8FwpJ6yfuwYAYq-G7TGd3KfgjdZQ-gFl4");'></div>
+</div>
+<div class="relative z-20 max-w-[900px] text-center flex flex-col gap-8">
+<div class="space-y-4">
+<h1 class="font-display text-5xl md:text-7xl font-bold text-white leading-tight">
+                        Exclusivity in <span class="text-champagne">Every Note</span>.
+                    </h1>
+<p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto font-light leading-relaxed">
+                        Curated access to the world's most prestigious galas, private concerts, and international symphony events.
+                    </p>
+</div>
+<!-- Search Bar -->
+<div class="w-full max-w-2xl mx-auto">
+<div class="gold-border-gradient p-[1px] rounded-xl overflow-hidden flex items-center bg-[#20242c]">
+<div class="flex items-center px-4 text-white/40">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="bg-transparent border-none focus:ring-0 text-white flex-1 py-4 text-sm md:text-base placeholder:text-white/30" placeholder="Search events, venues, or cities" type="text"/>
+<div class="h-10 w-px bg-white/10 mx-2"></div>
+<div class="flex items-center px-4 text-white/40 gap-2 cursor-pointer hover:text-champagne">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+<span class="text-xs font-medium hidden sm:block">Date</span>
+</div>
+<button class="bg-champagne text-primary px-8 py-3 mr-1.5 my-1.5 rounded-lg font-bold text-sm tracking-wide hover:brightness-110 transition-all">
+                            EXPLORE
+                        </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+<span class="material-symbols-outlined text-3xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Main Content -->
+<main class="max-w-[1280px] mx-auto w-full px-6 lg:px-20 py-24 space-y-32">
+<!-- Featured Events Section -->
+<section>
+<div class="flex items-end justify-between mb-12">
+<div class="space-y-2">
+<p class="text-champagne text-xs font-bold tracking-[0.2em] uppercase">Curated Selection</p>
+<h2 class="font-display text-4xl font-bold text-white">Featured Events</h2>
+</div>
+<a class="text-white/60 hover:text-champagne text-sm font-medium flex items-center gap-2" href="#">
+                        View All Events <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="group glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute top-4 left-4 z-10 bg-champagne text-primary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Limited</div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Grand Opera House Interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnN_v8bxCPlHU6YJc3i7n_5nf4bW9RXhB-sFMGEc7LqcsOMMIhE6wSlJICq6uG-VViaQ0rXvCkrgIOuiPGwmdcL_1ssOGUU3W0OzVjNcWgAyuxDqh_6RwBFDXSFJIEMUdUh9tHlo3z9ScHrmWH_Co9ERAGCSCdwrI5o978DpAHbZ_lX7PybbzHAuuCmL1RYQklxBZpKdZsklLshx4VTf_vqsihD3WjllCAtG-u5AW1WlHRT5vDncBwll_uxPKw0dI4HVcdmmSDkBU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#282D38] to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-4">
+<span class="text-white/50 text-xs font-medium">October 14, 2024</span>
+<span class="text-champagne font-bold">$450+</span>
+</div>
+<h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-champagne transition-colors">Grand Opera Night</h3>
+<p class="text-white/60 text-sm mb-6 leading-relaxed">Experience a breathtaking performance at the historic Metropolitan House with private box seating.</p>
+<div class="mt-auto flex items-center gap-2 text-white/40 text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Milan, Italy</span>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Private outdoor jazz ensemble at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9nySDrg7d9rPvLNglZuuaOSZhdndfBz0xgqmzgkptnjVrRvkvBdRR4Z8zd80le0u9XxZideQK_jgnWjVOqbso1HtkdwkH4Nqrfxx731uxw0eEkDB7OIgfleK1DJmlOQGD-bCYbAmGGaoNOWVe3K7pv53-C7KpvWtbIl3NehOaVvSd-uXemTwGLu_J6BkcvOteJAVAbb0zYI5FN7ElpinF8PZZSe6dmvnW7zve9bNHALaY-duc8WMES0wv5DoVWQIN38CoDkmBlF0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#282D38] to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-4">
+<span class="text-white/50 text-xs font-medium">November 02, 2024</span>
+<span class="text-champagne font-bold">$320+</span>
+</div>
+<h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-champagne transition-colors">Private Vineyard Jazz</h3>
+<p class="text-white/60 text-sm mb-6 leading-relaxed">An intimate evening of world-class jazz paired with rare vintages from the estate cellar.</p>
+<div class="mt-auto flex items-center gap-2 text-white/40 text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Napa Valley, CA</span>
+</div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="group glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Symphony orchestra performing under starlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzucZ6vRLCpg002XkRXMAm4bClcCd76M_wtMYZyRwZfYHqqIjO1mfPh-k-04VH9dYc3TN0w4UBZd5aDBELZ8d6xY7ci8CaKr8aietHEb-p95pAb_yPIEmnQ6yhyjd3_BnMZU122sb4e3QS4afokg-6mx0kt9j_4yEZ8wT4pd2OX2p9qh9b9VMFTeS-SmWcH_kCag0PpVX3zYWnY6V7SNP_Gw5vwkdytkaNa0yRbN-ePhGR4mMWgWYb_OfBqHP5lnVEm6RQle0m-yA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#282D38] to-transparent opacity-60"></div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-4">
+<span class="text-white/50 text-xs font-medium">December 15, 2024</span>
+<span class="text-champagne font-bold">$580+</span>
+</div>
+<h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-champagne transition-colors">Symphony Under the Stars</h3>
+<p class="text-white/60 text-sm mb-6 leading-relaxed">The Philharmonic Orchestra's annual gala event featuring guest world-renowned soloists.</p>
+<div class="mt-auto flex items-center gap-2 text-white/40 text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Vienna, Austria</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Premium Experiences Section -->
+<section class="bg-primary/30 rounded-3xl p-12 lg:p-20 relative overflow-hidden border border-white/5">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-champagne/10 to-transparent"></div>
+<div class="grid lg:grid-cols-2 gap-16 relative z-10 items-center">
+<div class="space-y-8">
+<div class="space-y-4">
+<p class="text-champagne text-sm font-bold tracking-[0.3em] uppercase">The Inner Circle</p>
+<h2 class="font-display text-4xl lg:text-5xl font-bold text-white leading-tight">Elevate Your Presence with <span class="text-champagne italic">VIP Status</span>.</h2>
+<p class="text-white/60 text-lg leading-relaxed max-w-md">Our VIP packages offer more than just a seat. They provide an unforgettable atmosphere of luxury and convenience.</p>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-champagne">verified</span>
+<span class="text-white/80 font-medium">Backstage Artist Meet &amp; Greet</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-champagne">verified</span>
+<span class="text-white/80 font-medium">Dedicated Chauffeur &amp; Concierge</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-champagne">verified</span>
+<span class="text-white/80 font-medium">Exclusive Private Suite Access</span>
+</li>
+</ul>
+<button class="bg-champagne text-primary px-10 py-4 rounded-xl font-black tracking-widest text-sm hover:scale-105 transition-all">
+                            EXPLORE VIP SUITES
+                        </button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 mt-8">
+<div class="rounded-2xl overflow-hidden h-64 border border-white/10">
+<img class="w-full h-full object-cover" data-alt="Luxury suite with leather seating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKn9FS9KFdWle0ugQzTHzq1yHkzhUhA-xY2pdF1j6oxqVokZRKhuZgsMFiKIgC6T9rl0sLhAmWUk3Xa5V-7USarH_I7ghcerYjvABm7htyQms3gIQmzgX7waLrMyoR-EeFb0AWRRMgg1DB2LRyWK1pKnH_E1VF8HMVlo-VwHjx1yUvgA3PWS0Ny5MrWCKawxHSYi1ixUscBaSjQsXP-gQnoIqAMhcUO11XUbLzaTwPTq8pKjwNwnfLs_F9gqk4tSse149pl-HOvXo"/>
+</div>
+<div class="rounded-2xl overflow-hidden h-40 border border-white/10">
+<img class="w-full h-full object-cover" data-alt="Champagne flutes on silver tray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnqoRx7sKchji6iAMTGFMfw6HWYfleVT3C9RTbtCqaTsd8JOBjz5XPveE0TUbRUh4zoLKNXrenTNzRoTXaykMnUnJNDRAKH4exvtM3ayV-sQjS7IYVp-hlcTF5gV82N5oPCoTJJFKaIqss0xTrLBqEqRFLReqgGnTgUWFSb_IQ4HNTbvtmbTgcPl0kqJdszzpCY73qzhBUnVvL6bmI9Eeftv1Gpyyekl7OkH4aNpdwsO8vusvusjPmyYhhXFzJeK3fQ9cOCH_p7gM"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="rounded-2xl overflow-hidden h-40 border border-white/10">
+<img class="w-full h-full object-cover" data-alt="Fine dining catering platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLiBIK0fxRIUKTEMePACrtmISSb-43Tg2_-P9a7B0Pb6Lw9BUzUkvhhko21tueTvkl7L1HnRDbeVBaeVltDBUYhXMKyRk3pS-wjX-C4Tw6HfzfOvfgP3_9kAdORt3qrbdJKaw7LdOL-MEp4kxJ4xpAhk8vmh1Nys7B6KbB6uAdR-knVwKspIK1UbjwaZUeRKaOWWvFkYPR99BF6BhhaGa6I31NNVXKPHYGdG82jWjxpCymGv6W7q21XLjjKBB5CL8ubr-l8Go6BOs"/>
+</div>
+<div class="rounded-2xl overflow-hidden h-64 border border-white/10">
+<img class="w-full h-full object-cover" data-alt="Luxury car chauffeur service" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_aQsy9FqO1Z5yz7wwRHlEX6xpO2b48BNUtplrufDN7tqo7Slwms89OF4ruIdqu3_bKeJI7ZOlpD_62eMWrpDdjp4hnQ4tBtzz6ndmMXdErMOKFtm1SCJBlG5MhmB0JiTLXGRmiCmO_-XqGhcKWujees1vgzBplDRjjIy4_zb-12TTPuAPSw9_thXF2Xz3sC4ks3zT8f6zOeTJwxu817PZ3NMgHi5L6RM3SEjHpf-TQG2_NV1YeZNjy4hFlvQWUnDy2KRuteYjU4k"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark border-t border-white/5 pt-20 pb-10 px-6 lg:px-20">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="flex items-center gap-3">
+<div class="text-champagne">
+<span class="material-symbols-outlined text-3xl">token</span>
+</div>
+<h2 class="font-display text-xl font-bold tracking-tight text-white">BookingExpress</h2>
+</div>
+<p class="text-white/40 text-sm leading-relaxed">The global standard for curated luxury experiences and exclusive event management.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:border-champagne hover:text-champagne transition-all" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:border-champagne hover:text-champagne transition-all" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold text-sm tracking-widest uppercase">Explore</h4>
+<ul class="space-y-4 text-white/40 text-sm">
+<li><a class="hover:text-champagne transition-colors" href="#">Private Events</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Gala Calendar</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">VIP Memberships</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Partnerships</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold text-sm tracking-widest uppercase">Company</h4>
+<ul class="space-y-4 text-white/40 text-sm">
+<li><a class="hover:text-champagne transition-colors" href="#">Our Vision</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Curators</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-champagne transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold text-sm tracking-widest uppercase">Newsletter</h4>
+<p class="text-white/40 text-sm">Receive monthly invitations to the most exclusive global events.</p>
+<div class="flex border-b border-white/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-white flex-1 text-sm" placeholder="Your Email" type="email"/>
+<button class="text-champagne font-bold text-sm">JOIN</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/30 text-xs">© 2024 BookingExpress Premium. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-white/30 text-xs hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-white/30 text-xs hover:text-white transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

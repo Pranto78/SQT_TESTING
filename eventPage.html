@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BookingExpress Premium - Unified Dark Experience</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37", // Champagne Gold
+                        "pitch-black": "#050505",
+                        "charcoal": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+        }
+        body {
+            background-color: var(--deep-bg);
+            color: #ffffff;
+        }
+        .premium-glass {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+        }
+        .gold-button {
+            background-color: var(--primary-gold);
+            color: #000;
+            transition: all 0.3s ease;
+        }
+        .gold-button:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .secondary-outline {
+            border: 1px solid var(--border-subtle);
+            background: rgba(255, 255, 255, 0.03);
+            color: #d1d1d1;
+        }
+        .secondary-outline:hover {
+            border-color: var(--primary-gold);
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+    <nav class="sticky top-0 z-50 px-6 py-5 bg-pitch-black/90 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-primary font-display text-2xl font-bold tracking-tight flex items-center gap-1">
+                BookingExpress <span
+                    class="text-[10px] uppercase tracking-[0.2em] font-sans text-white/60 ml-2 border-l border-white/20 pl-2">Premium</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-[13px] uppercase tracking-widest font-medium">
+                <a class="text-white hover:text-primary transition-colors" href="#">Home</a>
+                <a class="text-primary" href="#">Events</a>
+                <a class="text-white hover:text-primary transition-colors" href="#">Concierge</a>
+                <a class="text-white hover:text-primary transition-colors" href="#">About</a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <button class="text-white/70 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-xl">search</span>
+                </button>
+                <a class="gold-button px-8 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
+                    href="#">Login</a>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <div class="max-w-2xl">
+                <h1 class="font-display text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">Upcoming Events
+                </h1>
+                <p class="text-white/50 text-lg font-light leading-relaxed">
+                    Access the world's most coveted stages. From private galas to front-row orchestral performances,
+                    curated exclusively for BookingExpress members.
+                </p>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="secondary-outline flex items-center gap-3 px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all">
+                    <span>Weekday</span>
+                    <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+                </button>
+                <button
+                    class="secondary-outline flex items-center gap-3 px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all">
+                    <span>Category</span>
+                    <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div
+                class="group premium-glass rounded-[2rem] overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden">
+                    <img alt="Concert Stage Lighting"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy1I54fy-QXGrRT7cJEHrNSRQO62f8wxbn8RRuFMmggirFCnkSFbN_zS9WRqNkp3kkOAs-MewO-T8zHcMV3IWBaMXW5YWKb5jlUAcz1mY_gww2Q-Lt2eTYh3lbhslQC-LNMwavUKwsz3wSHRLXyggA4xy6mTLxYESIEzkKYYqcWrzD-bRy4W93NyAfWytj3DQWDLEo-iAxYs9n442uJioOTV9auLNcFko3LTsV07nl2ZbOQK-JPSlBHZB2vu7xDRJTq-G7N7TJsv4" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-pitch-black via-transparent to-transparent">
+                    </div>
+                    <div
+                        class="absolute top-6 left-6 flex flex-col items-center bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl">
+                        <span class="text-[10px] uppercase tracking-tighter font-bold text-white/60">OCT</span>
+                        <span class="text-2xl font-display font-bold text-white leading-none">19</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3
+                        class="text-2xl font-display font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                        Blues on the Beach</h3>
+                    <div class="flex items-center gap-2 text-white/40 text-sm mb-8">
+                        <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                        <span>Santa Cruz Boardwalk</span>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between border-t border-white/5 pt-8">
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Schedule</span>
+                            <span class="text-sm font-medium text-white/80">7:00 PM</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Entry</span>
+                            <span class="text-sm font-bold text-primary">$45 – $130</span>
+                        </div>
+                        <button
+                            class="gold-button px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="group premium-glass rounded-[2rem] overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden">
+                    <img alt="Elegant Gala Event"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb7tcGD_90he82tbBVJw5YBHuAUWE91kueOaHw-GCZOhAHqMMheOh1PG7uQWZpJGiXbuA-sCxBseQ827or0eZWMgjQZesPjwLjKxoZfEOxMUF1DdEs2rmop-ieyTKio2faQ11mcQ_v4Ag1UL7iJQqcYxB-hjBSuorBVYZr4EJlfrcV8xkeuMC7XiM3c4L422oJa34pyp3nsibAB6uh3E2FPTzOpKqGFE94qMTjqiy0XC_4dXxfqPtXYl5UfJBQM6UsuYNLtYQCuw4" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-pitch-black via-transparent to-transparent">
+                    </div>
+                    <div
+                        class="absolute top-6 left-6 flex flex-col items-center bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl">
+                        <span class="text-[10px] uppercase tracking-tighter font-bold text-white/60">NOV</span>
+                        <span class="text-2xl font-display font-bold text-white leading-none">04</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3
+                        class="text-2xl font-display font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                        Emerald Charity Gala</h3>
+                    <div class="flex items-center gap-2 text-white/40 text-sm mb-8">
+                        <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                        <span>The Ritz-Carlton Ballroom</span>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between border-t border-white/5 pt-8">
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Schedule</span>
+                            <span class="text-sm font-medium text-white/80">8:30 PM</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Entry</span>
+                            <span class="text-sm font-bold text-primary">$250 – $800</span>
+                        </div>
+                        <button
+                            class="gold-button px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="group premium-glass rounded-[2rem] overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden">
+                    <img alt="Symphony Orchestra"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIv9mRDyi8aCOPpRLQFJiqIwk9ZkA9yXEyyjieS2oidukLvaFNA7tSo7XXPBkdoyAdsxTyGzZJuOtwErxf4Mr-7AdqrGMs2E4Woaxw6_L_tA3HE7hCITsHRf0zEvi2F_jX5VjuLrbQVU-eC-UTxfqBT_YhzfU2Dm7SS2xNkJHjWsxO9Oe0i02LrHfUgmfc6tJ_RgHORkHMbXBJUxFg1vYYrjP3yxsIpmlBwU0uIjzkuwoqJoKoayhfyNEq6Z9ehxSmuiz72DOst6I" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-pitch-black via-transparent to-transparent">
+                    </div>
+                    <div
+                        class="absolute top-6 left-6 flex flex-col items-center bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl">
+                        <span class="text-[10px] uppercase tracking-tighter font-bold text-white/60">DEC</span>
+                        <span class="text-2xl font-display font-bold text-white leading-none">12</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3
+                        class="text-2xl font-display font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                        Winter Symphony</h3>
+                    <div class="flex items-center gap-2 text-white/40 text-sm mb-8">
+                        <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                        <span>Grand Opera House</span>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between border-t border-white/5 pt-8">
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Schedule</span>
+                            <span class="text-sm font-medium text-white/80">6:30 PM</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Entry</span>
+                            <span class="text-sm font-bold text-primary">$85 – $320</span>
+                        </div>
+                        <button
+                            class="gold-button px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="group premium-glass rounded-[2rem] overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden">
+                    <img alt="Jazz Club"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Wh43iWw-AW_iqekZCqfpwqCzJdoWyTGO6_yTNiatNbXA5pgjQZ6qSNA-LQ6hh79jBUZQ9BqLteeEjM3xyj5PlQLf_4ZB3xXhIhIg4QIasPtz3wy5RrSAT-Itziq3m2x2RKl14kYXX74MAHPcbokMFh6NfyWN2ZeDKw5XgTcsuehpyfL60p91-21ZF5VwxHcA7mj-VAJA8Gy4J83EegoyDjmKO6XT6UXnZeBS8nPh1wSS8Wvax8cmlP8OO0Eme8DhswtxMwQC5k4" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-pitch-black via-transparent to-transparent">
+                    </div>
+                    <div
+                        class="absolute top-6 left-6 flex flex-col items-center bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl">
+                        <span class="text-[10px] uppercase tracking-tighter font-bold text-white/60">JAN</span>
+                        <span class="text-2xl font-display font-bold text-white leading-none">08</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3
+                        class="text-2xl font-display font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                        Midnight Jazz Session</h3>
+                    <div class="flex items-center gap-2 text-white/40 text-sm mb-8">
+                        <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                        <span>Blue Note Lounge</span>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between border-t border-white/5 pt-8">
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Schedule</span>
+                            <span class="text-sm font-medium text-white/80">11:00 PM</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Entry</span>
+                            <span class="text-sm font-bold text-primary">$35 – $95</span>
+                        </div>
+                        <button
+                            class="gold-button px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="group premium-glass rounded-[2rem] overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden">
+                    <img alt="Wine Tasting"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLMm0KuB93Tmf_osyX-2b2r49rCxpAzwIIbY5Cge4dBC80EDmYMQvJTqan64B7N3EFh9li5PwiPuqUJyGkPR4R3qxJCCv9O6qm4WEyXpemrYYHeOMwL6shm7LKgF6me7Yq-hlx2a1pPSdL618TUKno_YOCscI2vgXyMlV8y_1UQS2nXUHAyFog4jXTA5kRo8nR-CIATDQhrT17AmFluC6OazCyIMFTYpvuZPjV84Dfi6iLaeLxY8uKam53Rxw8SQ3WZsCIm9OEev4" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-pitch-black via-transparent to-transparent">
+                    </div>
+                    <div
+                        class="absolute top-6 left-6 flex flex-col items-center bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl">
+                        <span class="text-[10px] uppercase tracking-tighter font-bold text-white/60">JAN</span>
+                        <span class="text-2xl font-display font-bold text-white leading-none">22</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3
+                        class="text-2xl font-display font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                        Artisanal Wine Tasting</h3>
+                    <div class="flex items-center gap-2 text-white/40 text-sm mb-8">
+                        <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                        <span>Napa Valley Estates</span>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between border-t border-white/5 pt-8">
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Schedule</span>
+                            <span class="text-sm font-medium text-white/80">2:00 PM</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Entry</span>
+                            <span class="text-sm font-bold text-primary">$120 – $450</span>
+                        </div>
+                        <button
+                            class="gold-button px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="group premium-glass rounded-[2rem] overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2">
+                <div class="relative h-72 overflow-hidden">
+                    <img alt="Outdoor Festival"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4LcXTynEy6hcafEpAonvlk-zt61SYDIVaDVpizonwUc4igzUU3xc-2SHmytdCR_VlWH37Ub9oDZG9Iz9ues9E_RkSNZrD6_KxXUmlvJJiPBniaWWMEGA4NUF1Ul9Ie6j2-H4NyrL0c1Ch3Kp1iX6ErmA-K1y2X22QTuDf5gSsNlF-nQBKtdQuWgd5hjZtDvjl2D80KCiCnhq1_85HOLspXaB5xDPQwvkiDYG877Lrdd4gEPEd18IPODw85Yk39AB6tTTPT0RGKa4" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-pitch-black via-transparent to-transparent">
+                    </div>
+                    <div
+                        class="absolute top-6 left-6 flex flex-col items-center bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl">
+                        <span class="text-[10px] uppercase tracking-tighter font-bold text-white/60">FEB</span>
+                        <span class="text-2xl font-display font-bold text-white leading-none">14</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3
+                        class="text-2xl font-display font-bold mb-4 text-white group-hover:text-primary transition-colors">
+                        Valentine's Masquerade</h3>
+                    <div class="flex items-center gap-2 text-white/40 text-sm mb-8">
+                        <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                        <span>Venice Grand Canal</span>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between border-t border-white/5 pt-8">
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Schedule</span>
+                            <span class="text-sm font-medium text-white/80">9:00 PM</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 mb-1">Entry</span>
+                            <span class="text-sm font-bold text-primary">$180 – $600</span>
+                        </div>
+                        <button
+                            class="gold-button px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 flex justify-center">
+            <button
+                class="secondary-outline px-12 py-4 rounded-full text-xs font-bold uppercase tracking-[0.3em] hover:bg-white/5 transition-all">
+                Discover More Events
+            </button>
+        </div>
+    </main>
+    <footer class="bg-charcoal py-20 px-6 mt-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="max-w-xs">
+                <div class="text-primary font-display text-2xl font-bold tracking-tight mb-6">
+                    BookingExpress
+                </div>
+                <p class="text-white/40 text-sm leading-relaxed">
+                    Setting the gold standard in premium event booking and luxury concierge services since 2012.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-12 text-sm">
+                <div class="flex flex-col space-y-4">
+                    <span
+                        class="text-white font-bold uppercase tracking-widest text-[10px] mb-2 opacity-50">Explore</span>
+                    <a class="text-white/60 hover:text-primary transition-colors" href="#">Curated Collections</a>
+                    <a class="text-white/60 hover:text-primary transition-colors" href="#">Venue Partners</a>
+                    <a class="text-white/60 hover:text-primary transition-colors" href="#">Member Benefits</a>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <span
+                        class="text-white font-bold uppercase tracking-widest text-[10px] mb-2 opacity-50">Support</span>
+                    <a class="text-white/60 hover:text-primary transition-colors" href="#">Concierge Desk</a>
+                    <a class="text-white/60 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="text-white/60 hover:text-primary transition-colors" href="#">Terms of Use</a>
+                </div>
+                <div class="flex space-x-4">
+                    <span
+                        class="w-12 h-12 rounded-full secondary-outline flex items-center justify-center text-primary cursor-pointer transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.599 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span
+                        class="w-12 h-12 rounded-full secondary-outline flex items-center justify-center text-primary cursor-pointer transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto border-t border-white/5 mt-20 pt-10 text-center text-white/30 text-[10px] uppercase tracking-[0.4em]">
+            © 2024 BookingExpress Premium. Curated Excellence in Every Experience.
+        </div>
+    </footer>
+
+</body>
+
+</html>
